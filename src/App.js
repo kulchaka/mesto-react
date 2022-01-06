@@ -1,8 +1,10 @@
+import logo from './images/logo_3.png'
+
 function App() {
   return (
     <div className="App">
       <header className="header root__section">
-        <img src="./images/logo_3.png" alt="mesto logo" className="logo"/>
+        <img src={logo} alt="mesto logo" className="logo"/>
       </header>
       <div className="profile root__section">
         <div className="user-info">
