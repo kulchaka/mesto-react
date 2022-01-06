@@ -1,17 +1,34 @@
 import React from 'react';
 
 const Main = () => {
+  
+  const handleEditAvatarClick = () => {
+    document.querySelector('.popup-avatar').classList.add('popup_is-opened')
+  }
+
+  const handleEditProfileClick = () => {
+    document.querySelector('.popup-edit').classList.add('popup_is-opened')
+  }
+
+  const handleAddPlaceClick = () => {
+document.querySelector('.popup_add').classList.add('popup_is-opened')
+  }
+  
   return (
       <main>
         <div className="profile root__section">
           <div className="user-info">
-            <div className="user-info__photo">
+            <div
+                onClick={handleEditAvatarClick}
+                className="user-info__photo"
+            >
               <p className="user-info__change">Change logo</p>
             </div>
             <div className="user-info__data">
               <h1 className="user-info__name"></h1>
               <p className="user-info__job"></p>
               <button
+                  onClick={handleEditProfileClick}
                   data-id="popup-edit"
                   type="submit"
                   className="user-info__place-edit"
@@ -19,7 +36,11 @@ const Main = () => {
                 Edit
               </button>
             </div>
-            <button data-id="popup" className="button user-info__button">
+            <button
+                onClick={handleAddPlaceClick}
+                data-id="popup"
+                className="button user-info__button"
+            >
               +
             </button>
           </div>
